@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title><h:outputText value="Lecture WebService" /></title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+</h:head>
+
+<body id="page">
+
+	<header id="MainBar">
+		<div id="LightGreyNav">
+			<div class="container clearfix editeurBar">
+				<h:outputText value="Lecture WebService Voiture" escape="false" />
+			</div>
+		</div>
+	</header>
+
+	<main id="PageContenu" class="container" style="margin-top: 55px">
+
+		<div > 
+	
+			<h:form id="data">
+		    	<p:accordionPanel>
+		<p:tab title=" Choissi votre Modele">
+		 <p:dataTable  value="#{controlerObjectTest.list_query}" var="voiture">
+    <p:column headerText="Id">
+        <h:outputText value="#{voiture.id}" />
+    </p:column>
+    <p:column headerText="Marque">
+        <h:outputText value="#{voiture.marque}" />
+    </p:column>
+ 
+   	 <p:column headerText="Nom">
+        <h:outputText value="#{voiture.nom}" />
+    	</p:column>
+ 
+    	<p:column headerText="Prix">
+        <h:outputText value="#{voiture.prix}" />
+    	</p:column>
+		</p:dataTable>									
+		</p:tab>
+		<p:tab title=" Choissi vos Finitions">
+		</p:tab>
+		<p:tab title="Choissi vos Jantes">
+		</p:tab>
+		<p:tab title="Choissi vos Options suplementaires">
+		</p:tab>
+		</p:accordionPanel>
+			</h:form>	
+			
+		</div>			
+	</main>
+
+
+</body>
+</html>

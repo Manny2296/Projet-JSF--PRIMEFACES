@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+	<title><h:outputText value="Lecture WebService" /></title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	
+	
+</h:head>
+
+<body id="page">
+
+	<header id="MainBar">
+		<div id="LightGreyNav">
+			<div class="container clearfix editeurBar">
+				<h:outputText value="Lecture WebService" escape="false" />
+			</div>
+		</div>
+	</header>
+
+	<main id="PageContenu" class="container" style="margin-top: 55px">
+
+		<div class="col-sm-12 LeContenu">
+			<h3>Affichage d'un exemple</h3>
+			<h:form id="data">
+				<table class="table table-striped gpaTitle chargecenter">
+				<tr>
+					<th>Uv</th>
+					<th>Type</th>
+					<th>Jour</th>
+					<th>Début</th>
+					<th>Fin</th>
+					<th>Salle</th>
+					<th>Groupe</th>		
+				</tr>				
+				
+				<ui:repeat value="#{controlerObjectTest.edtTemplate}" var="edt">
+					<tr>
+						<td><h:outputText value="#{edt.uv}"/></td>
+						<td><h:outputText value="#{edt.type}"/></td>
+						<td><h:outputText value="#{edt.day}"/></td>
+						<td><h:outputText value="#{edt.begin}"/></td>
+						<td><h:outputText value="#{edt.end}"/></td>
+						<td><h:outputText value="#{edt.room}"/></td>
+						<td><h:outputText value="#{edt.group}"/></td>
+					</tr>	
+				</ui:repeat>	
+				</table>		
+			</h:form>	
+			
+		</div>			
+	</main>
+
+
+</body>
+</html>

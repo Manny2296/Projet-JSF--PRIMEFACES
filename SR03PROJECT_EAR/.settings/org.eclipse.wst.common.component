@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="SR03PROJECT_EAR">
+        <wb-resource deploy-path="/" source-path="/EarContent" tag="defaultRootSource"/>
+        <dependent-module archiveName="SR03PROJECT_EJB.jar" deploy-path="/" handle="module:/resource/SR03PROJECT_EJB/SR03PROJECT_EJB">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="SR03PROJECT_EJBClient.jar" deploy-path="/" handle="module:/resource/SR03PROJECT_EJBClient/SR03PROJECT_EJBClient">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="SR03PROJECT_REST.war" deploy-path="/" handle="module:/resource/SR03PROJECT_REST/SR03PROJECT_REST">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="SR03PROJECT_JPA.jar" deploy-path="/lib" handle="module:/resource/SR03PROJECT_JPA/SR03PROJECT_JPA">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="SR03PROJECT_WEB.war" deploy-path="/" handle="module:/resource/SR03PROJECT_WEB/SR03PROJECT_WEB">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+    </wb-module>
+</project-modules>
