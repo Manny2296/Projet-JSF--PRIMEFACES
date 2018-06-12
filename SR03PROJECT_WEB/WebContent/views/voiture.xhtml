@@ -17,7 +17,7 @@
 	<header id="MainBar">
 		<div id="LightGreyNav">
 			<div class="container clearfix editeurBar">
-				<h:outputText value="Lecture WebService Voiture" escape="false" />
+				<h:outputText value="Project SR03" escape="false" />
 			</div>
 		</div>
 	</header>
@@ -26,11 +26,10 @@
 
 		<div > 
 	
-			<h:form id="data">
-		    	<p:accordionPanel>
-		<p:tab title=" Choissi votre Modele">
-		 <p:dataTable  value="#{controlerObjectTest.list_query}" var="voiture">
-    <p:column headerText="Id">
+	   <h:form id="data">
+		<p:panel id="pnl_modeles" header="Modele" style="align-content: center;  align-items: center;" >  
+		<p:dataTable  value="#{controlerObjectTest.list_query}" var="voiture">
+        <p:column headerText="Id">
         <h:outputText value="#{voiture.id}" />
     </p:column>
     <p:column headerText="Marque">
@@ -44,16 +43,37 @@
     	<p:column headerText="Prix">
         <h:outputText value="#{voiture.prix}" />
     	</p:column>
-		</p:dataTable>									
-		</p:tab>
-		<p:tab title=" Choissi vos Finitions">
+		</p:dataTable>
+			<br></br>	
+		 <h:outputLabel for="id_modele" value="ID Modele  " />
+		 <p:inputText id="id_modele_txt" value="#{controlerObjectTest.modele_id}" required="true" label="id_modele"/>	
+		 <p:commandButton value="Valider" update="accordeonPanel"/>		            
+        </p:panel>
+        
+		<p:accordionPanel id="accordeonPanel">
+	
+		<p:tab title=" Choissi vos Motorisations">
+		<p:panel id="pnl_motorisations" header="Motorisations / Modele" style="align-content: center;  align-items: center;" >  
+		<p:dataTable  value="#{controlerObjectTest.motorisationsByModel}" var="motorisationbymodel">
+        <p:column headerText="Id">
+        <h:outputText value="#{motorisationbymodel.id}" />
+        </p:column>
+        <p:column headerText="Nom">
+        <h:outputText value="#{motorisationbymodel.nom}" />
+         </p:column>
+ 		<p:column headerText="Prix">
+        <h:outputText value="#{motorisationbymodel.prix}" />
+         </p:column>
+ 
+		</p:dataTable>	            
+        </p:panel>
 		</p:tab>
 		<p:tab title="Choissi vos Jantes">
 		</p:tab>
 		<p:tab title="Choissi vos Options suplementaires">
 		</p:tab>
 		</p:accordionPanel>
-			</h:form>	
+		</h:form>	
 			
 		</div>			
 	</main>
